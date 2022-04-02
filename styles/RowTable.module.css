@@ -1,0 +1,36 @@
+.row{
+    position: relative;
+    min-width: 735px;
+    max-width: 864px;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #1D1D1D;
+    border-radius: 5px;
+}
+
+.table{
+    min-width: 640px;
+    display: flex;
+    list-style: none;
+    font-size: .8em;
+}
+
+.table li{
+    text-align: center;
+    width: 120px;
+   
+}
+
+.actions_container{
+    min-width: 83px;
+    margin-right: 20px;
+}
+
+.action{
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    margin-left: 5px;
+}

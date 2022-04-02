@@ -1,0 +1,17 @@
+.screen{
+    display: flex;
+    justify-content: center;
+    
+    background-color: #1D1D1D;
+    height: .8em;
+    width: .5em;
+    margin: .2em;
+    border-radius: 10%;
+    border: 3px solid #DAE3ED;
+}
+.bar{
+    width: .25em;
+    height: 3px;
+    background-color: #DAE3ED;
+    border-radius: 25%;
+}
