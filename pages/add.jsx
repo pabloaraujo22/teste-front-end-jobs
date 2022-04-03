@@ -1,6 +1,6 @@
 import { Alert, Box, Button, CircularProgress, Grid } from '@mui/material';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Input from '../components/Input';
@@ -104,7 +104,11 @@ export default function Add(props) {
                 <div className={styles.form_control}>
                     <h1>Detalhes do Produto</h1>
 
-                    <Box component="form" onSubmit={handleSubmit}>
+                    <Box
+                        component="form"
+                        onSubmit={handleSubmit}
+                        padding={'1em'}
+                    >
                         <Grid container spacing={3}>
                             {loaded && (
                                 <Grid item xs={12}>
@@ -163,6 +167,7 @@ export default function Add(props) {
                                 <Grid container justifyContent="flex-end">
                                     <Button
                                         href="/"
+                                        className={styles.action}
                                         variant="contained"
                                         sx={{
                                             marginLeft: '20px',

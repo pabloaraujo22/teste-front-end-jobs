@@ -106,7 +106,11 @@ export default function UpdateProduct(props) {
             <main className={styles.main}>
                 <div className={styles.form_control}>
                     <h1>Detalhes do Produto</h1>
-                    <Box component="form" onSubmit={handleSubmit}>
+                    <Box
+                        component="form"
+                        onSubmit={handleSubmit}
+                        padding={'1em'}
+                    >
                         <Grid container spacing={5}>
                             {loaded && (
                                 <Grid item xs={12}>
