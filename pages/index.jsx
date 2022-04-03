@@ -35,7 +35,11 @@ export default function Home(props) {
                     <div className={styles.products_header}>
                         <h1>Produtos</h1>
                         <div>
-                            <Button variant="contained" href="/add">
+                            <Button
+                                variant="contained"
+                                href="/add"
+                                sx={{ backgroundColor: '#DAE3ED' }}
+                            >
                                 <AddIcon />
                                 <SmartphoneIcon sx={{ marginRight: '3px' }} />
                                 Adicionar

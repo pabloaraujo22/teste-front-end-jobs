@@ -5,6 +5,7 @@ import {
     OutlinedInput,
 } from '@mui/material';
 import { useState } from 'react';
+import styles from '../styles/Input.module.css';
 
 export default function InputPrice(props) {
     const { label, name, handleOnChange, defaultValue = '' } = props;
@@ -20,6 +21,7 @@ export default function InputPrice(props) {
                 {label}
             </InputLabel>
             <OutlinedInput
+                inputProps={{ min: 1 }}
                 required
                 type="number"
                 color="secondary"

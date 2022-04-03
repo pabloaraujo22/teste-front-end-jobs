@@ -3,7 +3,6 @@
     position: relative;
     min-height: calc(100vh - 174px);
     padding: 60px;
-    border: 1px solid black;
 }
 
 .products{

@@ -44,6 +44,23 @@ export default function UpdateProduct(props) {
         setLoaded(false);
         setLoading(true);
         try {
+            if (!phone.date) {
+                throw new Error('Data de Inicio é Obrigatorio!');
+            }
+            if (!phone.endDate) {
+                throw new Error('Data de Termino é Obrigatorio!');
+            }
+            if (phone.model.length < 2 || phone.model.length > 255) {
+                throw new Error(
+                    'Modelo deve ter no mínimo 2 caracteres e no maximo 255!'
+                );
+            }
+
+            if (phone.brand.length < 2 || phone.brand.length > 255) {
+                throw new Error(
+                    'Marca deve ter no mínimo 2 caracteres e no maximo 255!'
+                );
+            }
             if (
                 moment
                     .duration(moment(phone.endDate).diff(moment(phone.date)))
@@ -151,14 +168,20 @@ export default function UpdateProduct(props) {
                                     <Button
                                         href="/"
                                         variant="contained"
-                                        sx={{ marginLeft: '20px' }}
+                                        sx={{
+                                            marginLeft: '20px',
+                                            backgroundColor: '#DAE3ED',
+                                        }}
                                     >
                                         Voltar
                                     </Button>
                                     <Button
                                         type="submit"
                                         variant="contained"
-                                        sx={{ marginLeft: '20px' }}
+                                        sx={{
+                                            marginLeft: '20px',
+                                            backgroundColor: '#DAE3ED',
+                                        }}
                                     >
                                         Salvar
                                     </Button>

@@ -24,6 +24,7 @@ export default function SelectDate(props) {
                 color="secondary"
                 label={label}
                 value={value}
+                minDate={moment(new Date('2012-02-29'))}
                 inputFormat="DD/MM/yyyy"
                 mask="__/__/____"
                 onChange={handleChange}
