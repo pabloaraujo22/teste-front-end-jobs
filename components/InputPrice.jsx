@@ -21,7 +21,7 @@ export default function InputPrice(props) {
                 {label}
             </InputLabel>
             <OutlinedInput
-                inputProps={{ min: 1 }}
+                inputProps={{ min: 1, step: '.01' }}
                 required
                 type="number"
                 color="secondary"
